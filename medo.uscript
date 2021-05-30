@@ -6,11 +6,14 @@
 */
  
 config = {
-  "correctUsageMe": "Correct usage: /me <message>",
-  "correctUsageDo": "Correct usage: /do <message>",
   "messageIcon": "https://www.iconninja.com/files/823/33/273/comment-bubbles-chat-messages-icon.png",
   "meDoWebhook": "https://discord.com/api/webhooks/846780363342479370/bAPXiXHXOgac7J_dfK9QOagD2QN45VSZh3DGLt0JM0e6MX2OuJVAmnkwL6vu-HLdeYiv",
   "webhookIcon": "https://www.iconninja.com/files/823/33/273/comment-bubbles-chat-messages-icon.png"
+};
+
+translation = {
+  "correctUsageMe": "Correct usage: /me <message>",
+  "correctUsageDo": "Correct usage: /do <message>"
 };
  
 command me(argME){
