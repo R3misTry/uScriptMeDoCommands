@@ -1,10 +1,10 @@
 /*
 	Script Name: Me Do Commands
-	Version: 1.0.0
+	Version: 1.0.1
 	Description: me do commands for rp servers
 	Created By: R3misTry
 */
-
+ 
 config = {
   "correctUsageMe": "Correct usage: /me <message>",
   "correctUsageDo": "Correct usage: /do <message>",
@@ -12,7 +12,7 @@ config = {
   "meDoWebhook": "https://discord.com/api/webhooks/846780363342479370/bAPXiXHXOgac7J_dfK9QOagD2QN45VSZh3DGLt0JM0e6MX2OuJVAmnkwL6vu-HLdeYiv",
   "webhookIcon": "https://www.iconninja.com/files/823/33/273/comment-bubbles-chat-messages-icon.png"
 };
-
+ 
 command me(argME){
     premission = "me.do";
     allowedCaller = "Player";
@@ -24,12 +24,12 @@ command me(argME){
         foreach (loopPlayer in server.players)
         {
             if(player.position.distance(loopPlayer.position) < 20)
-            loopPlayer.message("{0} <b>({1})</b>".format(arguments.join(" "), player.name), "green", config["messageIcon"]);
-            discord.send("ME **|** {0} **({1})** **|** {2}".format(arguments.join(" "), player.name, player.id), config["meDoWebhook"], "ME LOG", config["webhookIcon"]);
+            loopPlayer.message("<b>{1}</b> {0}".format(arguments.join(" "), player.name), "magenta", config["messageIcon"]);
+            discord.send("ME **|** **{1}** {0} **|** {2}".format(arguments.join(" "), player.name, player.id), config["meDoWebhook"], "ME LOG", config["webhookIcon"]);
         }
     }
 }
-
+ 
 command do(argDO){
     premission = "me.do";
     allowedCaller = "Player";
@@ -41,8 +41,8 @@ command do(argDO){
         foreach (loopPlayer in server.players)
         {
             if(player.position.distance(loopPlayer.position) < 20)
-            loopPlayer.message("<b>{1}</b> {0}".format(arguments.join(" "), player.name), "magenta", config["messageIcon"]);
-            discord.send("DO **|** **{1}** {0} **|** {2}".format(arguments.join(" "), player.name, player.id), config["meDoWebhook"], "DO LOG", config["webhookIcon"]);
+            loopPlayer.message("{0} <b>({1})</b>".format(arguments.join(" "), player.name), "green", config["messageIcon"]);
+            discord.send("DO **|** {0} **({1})** **|** {2}".format(arguments.join(" "), player.name, player.id), config["meDoWebhook"], "DO LOG", config["webhookIcon"]);
         }
     }
 }
